@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Countdown from '../components/Countdown'
 
 // ─── Store buttons ─────────────────────────────────────────────────────────────
 
@@ -351,6 +352,9 @@ function Hero() {
             <p className="text-white/65 text-lg md:text-xl mb-10 max-w-lg mx-auto lg:mx-0 leading-relaxed">
               Create a private league, predict the tournament, and compete with friends — round by round, match by match.
             </p>
+            <div className="flex justify-center lg:justify-start">
+              <Countdown />
+            </div>
             <div className="flex justify-center lg:justify-start">
               <StoreButtons />
             </div>

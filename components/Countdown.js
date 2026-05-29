@@ -29,7 +29,7 @@ export default function CountdownBanner() {
   }, [])
 
   return (
-    <div className="fixed top-16 left-0 right-0 z-40 bg-[#D8FF00] h-11">
+    <div className="fixed top-16 left-0 right-0 z-40 bg-[#D8FF00]/80 backdrop-blur-md h-11">
       <div className="max-w-5xl mx-auto px-6 h-full flex items-center justify-between">
 
         <p className="text-[#25006F] font-bold text-sm hidden sm:block">

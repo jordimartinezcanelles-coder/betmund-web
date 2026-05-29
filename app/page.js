@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 // ─── Store buttons ─────────────────────────────────────────────────────────────
 
@@ -311,13 +312,18 @@ function ArenaScoring() {
 function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#25006F]/90 backdrop-blur-md border-b border-white/10">
-      <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div className="max-w-5xl mx-auto px-6 h-16 grid grid-cols-3 items-center">
         <Link href="/" className="text-white font-black text-xl tracking-tight">
           bet<span className="text-[#D8FF00]">mund</span>
         </Link>
-        <a href="#download" className="bg-[#D8FF00] text-[#25006F] font-bold text-sm px-5 py-2 rounded-full hover:bg-[#c8ef00] transition-colors">
-          Download
-        </a>
+        <div className="flex justify-center">
+          <Image src="/icon.png" alt="Betmund" width={40} height={40} className="rounded-xl" />
+        </div>
+        <div className="flex justify-end">
+          <a href="#download" className="bg-[#D8FF00] text-[#25006F] font-bold text-sm px-5 py-2 rounded-full hover:bg-[#c8ef00] transition-colors">
+            Download
+          </a>
+        </div>
       </div>
     </nav>
   )
@@ -327,8 +333,15 @@ function Navbar() {
 
 function Hero() {
   return (
-    <section className="min-h-screen bg-gradient-to-br from-[#25006F] via-[#3A12A3] to-[#5522D6] flex items-center pt-16">
-      <div className="max-w-5xl mx-auto px-6 py-24 w-full">
+    <section className="relative min-h-screen bg-gradient-to-br from-[#25006F] via-[#3A12A3] to-[#5522D6] flex items-center pt-16">
+      {/* Hook strip */}
+      <div className="absolute top-0 left-0 right-0 bg-[#D8FF00]/10 border-b border-[#D8FF00]/20 py-2.5 text-center">
+        <p className="text-[#D8FF00] text-sm font-bold tracking-wide">
+          ⚽ Who knows football best in your group chat? <span className="text-white/60 font-normal">Now you can find out.</span>
+        </p>
+      </div>
+
+      <div className="max-w-5xl mx-auto px-6 py-24 w-full mt-10">
         <div className="flex flex-col lg:flex-row items-center gap-16">
           <div className="flex-1 text-center lg:text-left">
             <span className="inline-block bg-[#D8FF00] text-[#25006F] text-xs font-bold px-4 py-1.5 rounded-full mb-6 tracking-widest uppercase">

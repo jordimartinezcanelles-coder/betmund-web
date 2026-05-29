@@ -335,7 +335,7 @@ function Navbar() {
 
 function Hero() {
   return (
-    <section className="min-h-screen bg-gradient-to-br from-[#25006F] via-[#3A12A3] to-[#5522D6] pt-16 flex flex-col">
+    <section className="min-h-screen bg-gradient-to-br from-[#25006F] via-[#3A12A3] to-[#5522D6] pt-[108px] flex flex-col">
 
 
       <div className="flex-1 flex items-center">
@@ -352,9 +352,6 @@ function Hero() {
             <p className="text-white/65 text-lg md:text-xl mb-10 max-w-lg mx-auto lg:mx-0 leading-relaxed">
               Create a private league, predict the tournament, and compete with friends — round by round, match by match.
             </p>
-            <div className="flex justify-center lg:justify-start">
-              <Countdown />
-            </div>
             <div className="flex justify-center lg:justify-start">
               <StoreButtons />
             </div>
@@ -589,6 +586,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
+      <Countdown />
       <main>
         <Hero />
         <CreateLeagueSection />

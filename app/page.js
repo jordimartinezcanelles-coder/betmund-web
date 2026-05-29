@@ -336,20 +336,6 @@ function Hero() {
   return (
     <section className="min-h-screen bg-gradient-to-br from-[#25006F] via-[#3A12A3] to-[#5522D6] pt-16 flex flex-col">
 
-      {/* Hook — glass card teaser */}
-      <div className="w-full px-6 py-8 flex justify-center border-b border-white/10 flex-shrink-0">
-        <div className="max-w-2xl w-full bg-white/8 border border-white/15 rounded-3xl px-8 py-7 text-center backdrop-blur-sm">
-          <div className="w-10 h-0.5 bg-[#D8FF00] mx-auto mb-4 rounded-full" />
-          <p className="text-white/40 text-[10px] font-bold tracking-widest uppercase mb-3">⚽ The challenge is on</p>
-          <h2 className="text-2xl md:text-3xl font-black text-white leading-snug mb-3">
-            Who knows football best{' '}
-            <span className="text-[#D8FF00]">in your group chat?</span>
-          </h2>
-          <p className="text-white/50 text-sm md:text-base">
-            Create a league. Make your picks. Settle it once and for all.
-          </p>
-        </div>
-      </div>
 
       <div className="flex-1 flex items-center">
       <div className="max-w-5xl mx-auto px-6 py-16 w-full">

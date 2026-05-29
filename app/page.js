@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Image from 'next/image'
 
 // ─── Store buttons ─────────────────────────────────────────────────────────────
 
@@ -317,8 +316,8 @@ function Navbar() {
           bet<span className="text-[#D8FF00]">mund</span>
         </Link>
         <div className="flex justify-center">
-          <div className="w-10 h-10 rounded-xl bg-[#3A12A3] border border-white/20 flex items-center justify-center overflow-hidden">
-            <Image src="/trophy.png" alt="Betmund" width={30} height={30} className="object-contain" />
+          <div className="w-12 h-12 rounded-2xl bg-[#3A12A3] border border-white/20 flex items-center justify-center shadow-lg" style={{padding: '4px'}}>
+            <img src="/trophy.png" alt="Betmund" style={{width: '100%', height: '100%', objectFit: 'contain'}} />
           </div>
         </div>
         <div className="flex justify-end">
@@ -336,16 +335,21 @@ function Navbar() {
 function Hero() {
   return (
     <section className="min-h-screen bg-gradient-to-br from-[#25006F] via-[#3A12A3] to-[#5522D6] pt-16 flex flex-col">
-      {/* Hook strip — sits right below the fixed navbar */}
-      <div className="w-full bg-[#D8FF00]/12 border-b border-[#D8FF00]/25 py-3 text-center flex-shrink-0">
-        <p className="text-[#D8FF00] text-sm font-bold tracking-wide">
-          ⚽ Who knows football best in your group chat?{' '}
-          <span className="text-white/55 font-normal">Now you can find out.</span>
+
+      {/* Hook — big bold statement */}
+      <div className="w-full py-12 md:py-16 text-center border-b border-white/10 flex-shrink-0 px-6">
+        <p className="text-white/40 text-xs font-bold tracking-widest uppercase mb-4">⚽ The challenge is on</p>
+        <h2 className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-[1.05] mb-4">
+          Who knows football best<br />
+          <span className="text-[#D8FF00]">in your group chat?</span>
+        </h2>
+        <p className="text-white/55 text-lg md:text-xl max-w-xl mx-auto">
+          Create a league. Make your picks. Settle it once and for all.
         </p>
       </div>
 
       <div className="flex-1 flex items-center">
-      <div className="max-w-5xl mx-auto px-6 py-20 w-full">
+      <div className="max-w-5xl mx-auto px-6 py-16 w-full">
         <div className="flex flex-col lg:flex-row items-center gap-16">
           <div className="flex-1 text-center lg:text-left">
             <span className="inline-block bg-[#D8FF00] text-[#25006F] text-xs font-bold px-4 py-1.5 rounded-full mb-6 tracking-widest uppercase">

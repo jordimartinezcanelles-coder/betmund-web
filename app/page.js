@@ -349,9 +349,20 @@ function Hero() {
               Your World Cup.<br />
               <span className="text-[#D8FF00]">Your League.</span>
             </h1>
-            <p className="text-white/65 text-lg md:text-xl mb-10 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+            <p className="text-white/65 text-lg md:text-xl mb-8 max-w-lg mx-auto lg:mx-0 leading-relaxed">
               Create a private league, predict the tournament, and compete with friends — round by round, match by match.
             </p>
+            <div className="flex justify-center lg:justify-start mb-8">
+              <div className="inline-flex items-center gap-3 bg-white/10 border border-white/15 backdrop-blur-sm rounded-2xl px-5 py-3">
+                <span className="relative flex h-2.5 w-2.5 flex-shrink-0">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D8FF00] opacity-60"></span>
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#D8FF00]"></span>
+                </span>
+                <p className="text-white/90 font-bold text-sm">
+                  App launching soon — be ready before the first kickoff.
+                </p>
+              </div>
+            </div>
             <div className="flex justify-center lg:justify-start">
               <StoreButtons />
             </div>

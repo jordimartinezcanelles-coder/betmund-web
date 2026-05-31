@@ -4,6 +4,13 @@ import { useEffect, useState } from 'react'
 
 const TARGET = new Date('2026-06-11T23:00:00Z')
 
+const DEFAULT_MESSAGES = {
+  desktop: '⚽ Gather your squad — the biggest World Cup ever is almost here.',
+  mobile:  '⚽ The World Cup is coming!',
+  kickoff: 'Kickoff · Jun 11, 2026',
+  begun:   '🏆 It has begun!',
+}
+
 function calcTimeLeft() {
   const diff = TARGET - Date.now()
   if (diff <= 0) return null
@@ -19,7 +26,7 @@ function pad(n) {
   return String(n).padStart(2, '0')
 }
 
-export default function CountdownBanner() {
+export default function CountdownBanner({ messages = DEFAULT_MESSAGES }) {
   const [t, setT] = useState(null)
 
   useEffect(() => {
@@ -32,12 +39,8 @@ export default function CountdownBanner() {
     <div className="fixed top-16 left-0 right-0 z-40 bg-[#D8FF00]/80 backdrop-blur-md h-11">
       <div className="max-w-5xl mx-auto px-6 h-full flex items-center justify-between">
 
-        <p className="text-[#25006F] font-bold text-sm hidden sm:block">
-          ⚽ Gather your squad — the biggest World Cup ever is almost here.
-        </p>
-        <p className="text-[#25006F] font-bold text-sm sm:hidden">
-          ⚽ The World Cup is coming!
-        </p>
+        <p className="text-[#25006F] font-bold text-sm hidden sm:block">{messages.desktop}</p>
+        <p className="text-[#25006F] font-bold text-sm sm:hidden">{messages.mobile}</p>
 
         {t ? (
           <div className="flex items-center gap-1 font-black text-[#25006F] tabular-nums text-sm flex-shrink-0">
@@ -50,7 +53,7 @@ export default function CountdownBanner() {
             <span>{pad(t.seconds)}<span className="font-normal text-[#25006F]/50 text-xs ml-0.5">s</span></span>
           </div>
         ) : (
-          <span className="text-[#25006F] font-black text-sm">🏆 It has begun!</span>
+          <span className="text-[#25006F] font-black text-sm">{messages.begun}</span>
         )}
 
       </div>

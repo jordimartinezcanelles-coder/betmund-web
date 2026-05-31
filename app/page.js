@@ -553,6 +553,17 @@ function Download() {
         <p className="text-[#25006F]/65 text-lg mb-10 max-w-md mx-auto">
           Join your friends in a private league. The 2026 World Cup starts soon.
         </p>
+
+        <div className="inline-flex items-center gap-3 bg-[#25006F]/10 border border-[#25006F]/20 rounded-2xl px-6 py-4 mb-10">
+          <span className="relative flex h-2.5 w-2.5 flex-shrink-0">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#25006F] opacity-60"></span>
+            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#25006F]"></span>
+          </span>
+          <p className="text-[#25006F] font-bold text-sm">
+            App launching soon — be ready before the first kickoff.
+          </p>
+        </div>
+
         <div className="flex flex-wrap gap-4 justify-center">
           <StoreButtons dark />
         </div>
